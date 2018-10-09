@@ -1,0 +1,13 @@
+/*test*/
+
+.title {
+  color: green;
+}
+
+.btn {
+  background-color: aqua;
+  color: blue;
+  &:hover {
+    background-color: palevioletred;
+  }
+}
