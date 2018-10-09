@@ -1,0 +1,15 @@
+/*test*/
+
+.title {
+	color: green;
+}
+
+.btn {
+	background-color: aqua;
+	color: blue;
+}
+
+.btn:hover {
+	background-color: palevioletred;
+}
+
