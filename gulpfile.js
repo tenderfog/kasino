@@ -60,10 +60,15 @@ gulp.task("css", () => {
 
 // Переводим png и jpg в webP
 gulp.task("webp", () => {
-  return gulp
-    .src("./src/img/**/*.{png,jpg,jpeg}")
-    .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("./build/img"));
+  return (
+    gulp
+      .src("./src/img/**/*.{png,jpg,jpeg}")
+      .pipe(webp({ quality: 90 }))
+      //Выкидываем img  в папку build
+      .pipe(gulp.dest("./build/img"))
+      // Говорим browser-sync о том что пора перезагрузить барузер так как файл изменился
+      .pipe(server.stream())
+  );
 });
 
 // Создаем таск для оптимизации картинок
@@ -84,7 +89,18 @@ gulp.task("images", () => {
       )
       // Выкидываем в папку build/img
       .pipe(gulp.dest("./build/img"))
+      // Говорим browser-sync о том что пора перезагрузить барузер так как файл изменился
+      .pipe(server.stream())
   );
+});
+
+gulp.task("js", () => {
+  gulp
+    .src(["./src/js/**/*.js"])
+    // .pipe(concat('index.js')) // Собираем все JS
+    .pipe(gulp.dest("./build/js"))
+    // Говорим browser-sync о том что пора перезагрузить барузер так как файл изменился
+    .pipe(server.stream());
 });
 
 // Таск копирования всех шрифтов из папки fonts в build/fonts
@@ -101,7 +117,9 @@ gulp.task("watch", () => {
   // Следим за изменениями в любом sass файле и вызываем таск 'css' на каждом изменении
   gulp.watch("./src/sass/**/*.scss", ["css"]);
   // Следим за изменениями картинок и вызываем таск 'img' на каждом изменении
-  // gulp.watch("./src/img/**/*.*", ["webp", "img"]);
+  gulp.watch("./src/img/**/*.*", ["webp", "img"]);
+  // Следим за изменениями js и вызываем таск 'js' на каждом изменении
+  gulp.watch("./src/js/**/*.js*", ["js"]);
 });
 
 // Таск создания и запуска веб-сервера
@@ -129,15 +147,7 @@ gulp.task("del:build", () => {
 // Таск который 1 раз собирает все статические файлы
 // Запускается из корня проекта командой npm run build
 gulp.task("build", function(done) {
-  sequence(
-    "del:build",
-    "webp",
-    "images",
-    "fonts",
-    "css",
-    "html",
-    done
-  );
+  sequence("del:build", "webp", "images", "fonts", "css", "html", "js", done);
 });
 
 // Главный таск для разработки, сначала удаляет папку build,
