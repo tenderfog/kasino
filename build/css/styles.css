@@ -6012,17 +6012,26 @@ header {
 	background-size: cover;
 }
 
+header .head_top {
+	height: 118px;
+}
+
+header .head_bottom {
+	margin-top: 125px;
+}
+
 header .head_bottom p {
 	color: #fff;
 	font-family: Roboto Condensed;
 	font-size: 18px;
-	font-weight: 400;
+	font-weight: 100;
 	line-height: 28px;
 	text-transform: uppercase;
+	text-align: center;
 }
 
 #logo {
-	width: 178px;
+	width: 189px;
 	height: 124px;
 }
 
@@ -6117,6 +6126,40 @@ header .head_bottom p {
 
 .navbar-nav form[role="search"] button[type="reset"] {
 	display: none;
+}
+
+.planets_1 {
+	background: url("../img/planets_1.svg") no-repeat;
+	display: block;
+	width: 213px;
+	height: 189px;
+}
+
+.slot_hero {
+	background: url("../img/planets_2.svg") no-repeat;
+	display: block;
+	width: 200px;
+	height: 205px;
+	margin: 0 auto;
+}
+
+.planets_3 {
+	background: url("../img/planets_3.svg") no-repeat;
+	display: block;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	right: 0;
+}
+
+.bird {
+	background: url("../img/slot_hero_1.png") no-repeat;
+	display: block;
+	width: 195px;
+	height: 164px;
+	position: absolute;
+	top: -95px;
+	left: 0;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
