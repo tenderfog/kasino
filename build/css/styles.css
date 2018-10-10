@@ -5993,8 +5993,14 @@ a.text-dark:focus {
 	transition: .5s;
 }
 
+html {
+	height: 100%;
+}
+
 body {
-	background: #06023a;
+	background: url("/img/background.svg") no-repeat;
+	background-size: cover;
+	height: 100%;
 }
 
 #logo {
