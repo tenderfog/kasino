@@ -32,6 +32,13 @@ gulp.task("html", () => {
   );
 });
 
+// Таск копирования всех скриптов из папки js в build/js
+gulp.task("js", () => {
+  return gulp
+    .src("./src/js/**/*.js")
+    .pipe(gulp.dest("./build/js"));
+});
+
 // Создаем таск для сборки css файлов
 gulp.task("css", () => {
   // Берем только файл styles.scss в папке src, в который все импортируется
