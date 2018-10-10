@@ -6002,32 +6002,21 @@ html {
 }
 
 body {
-	background: url("../img/background.svg") no-repeat;
-	background-size: cover;
+	background: #040437 url(../img/background.svg) no-repeat top center;
 	height: 100%;
 }
 
-header {
-	background: url("../img/background_png.png") no-repeat;
+.wrapper {
+	background: url(../img/background_png.png) no-repeat;
 	background-size: cover;
 }
 
+header {
+	height: 145px;
+}
+
 header .head_top {
-	height: 118px;
-}
-
-header .head_bottom {
-	margin-top: 125px;
-}
-
-header .head_bottom p {
-	color: #fff;
-	font-family: Roboto Condensed;
-	font-size: 18px;
-	font-weight: 100;
-	line-height: 28px;
-	text-transform: uppercase;
-	text-align: center;
+	height: 100%;
 }
 
 #logo {
@@ -6042,6 +6031,10 @@ header .head_bottom p {
 
 .navbar {
 	padding-top: 0;
+}
+
+.navbar-nav {
+	position: relative;
 }
 
 .navbar-nav .nav-link {
@@ -6089,7 +6082,7 @@ header .head_bottom p {
 .navbar-nav form[role="search"] {
 	position: absolute;
 	top: 37px;
-	right: 0px;
+	right: -10px;
 	width: 100%;
 	padding: 0px;
 	margin: 0px;
@@ -6140,7 +6133,7 @@ header .head_bottom p {
 	display: block;
 	width: 200px;
 	height: 205px;
-	margin: 0 auto;
+	margin: 35px auto 0 auto;
 }
 
 .planets_3 {
@@ -6158,8 +6151,66 @@ header .head_bottom p {
 	width: 195px;
 	height: 164px;
 	position: absolute;
-	top: -95px;
+	top: -65px;
 	left: 0;
+}
+
+.but {
+	width: 163px;
+	height: 48px;
+	border-radius: 5px;
+	display: inline-block;
+	color: #030437;
+	font-family: Roboto Condensed;
+	font-size: 18px;
+	font-weight: 400;
+	text-align: center;
+	line-height: 48px;
+}
+
+.but.yellow {
+	box-shadow: 0 2px 15px rgba(250, 239, 108, 0.42), 0 2px 4px rgba(0, 0, 0, 0.5);
+	background: #e4d73b;
+}
+
+.align_left {
+	text-align: left;
+}
+
+.align_right {
+	text-align: right;
+}
+
+.island_row {
+	margin-top: 125px;
+}
+
+.island_row p {
+	color: #fff;
+	font-family: Roboto Condensed;
+	font-size: 18px;
+	font-weight: 100;
+	line-height: 28px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.island_row .but_row a {
+	display: block;
+	outline: none;
+}
+
+.island_row .but_row a .but.yellow {
+	vertical-align: middle;
+	margin-top: 100px;
+}
+
+.island_row .but_row a .but {
+	margin: 0 50px;
+}
+
+.island_row .but_row a:hover {
+	text-decoration: none;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
