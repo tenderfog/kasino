@@ -5989,6 +5989,10 @@ a.text-dark:focus {
 	visibility: hidden !important;
 }
 
+/* Colors */
+
+/* Fonts */
+
 * {
 	transition: .5s;
 }
@@ -6006,6 +6010,15 @@ body {
 header {
 	background: url("/img/background_png.png") no-repeat;
 	background-size: cover;
+}
+
+header .head_bottom p {
+	color: #fff;
+	font-family: Roboto Condensed;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 28px;
+	text-transform: uppercase;
 }
 
 #logo {
