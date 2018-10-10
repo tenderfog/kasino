@@ -1,24 +1,7 @@
 header {
-	background: url('../img/background_png.png') no-repeat;
-	background-size: cover;
-
+	height: 145px;
 	& .head_top {
-		height: 118px;
-	}
-
-	& .head_bottom {
-		margin-top: 125px;
-
-		p {
-			color: $white;
-			font-family: $Roboto_Condensed;
-			font-size: 18px;
-			font-weight: 100;
-			line-height: 28px;
-			text-transform: uppercase;
-			text-align: center;
-		}
-
+		height: 100%;
 	}
 
 }
@@ -39,6 +22,7 @@ header {
 }
 
 .navbar-nav {
+	position: relative;
 	& .nav-link {
 		color: $white;
 		font-family: 'Roboto Condensed', sans-serif;
@@ -85,7 +69,7 @@ header {
 	& form[role="search"] {
 		position: absolute;
 		top: 37px;
-		right: 0px;
+    	right: -10px;
 		width: 100%;
 		padding: 0px;
 		margin: 0px;
@@ -124,39 +108,6 @@ header {
 
 }
 
-.planets_1 {
-	background: url('../img/planets_1.svg') no-repeat;
-	display: block;
-	width: 213px;
-	height: 189px;
-}
-
-.slot_hero {
-	background: url('../img/planets_2.svg') no-repeat;
-	display: block;
-    width: 200px;
-    height: 205px;
-    margin: 0 auto;
-}
-
-.planets_3 {
-	background: url('../img/planets_3.svg') no-repeat;
-	display: block;
-	width: 50px;
-	height: 50px;
-	position: absolute;
-	right: 0;
-}
-
-.bird {
-	background: url('../img/slot_hero_1.png') no-repeat;
-	display: block;
-	width: 195px;
-	height: 164px;
-	position: absolute;
-	top: -95px;
-	left: 0;
-}
 
 @media (min-width:768px) {
 	.navbar-nav {
