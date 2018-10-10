@@ -2,7 +2,16 @@
 
 $white: #fff;
 $blue: #06023a;
+$primary-text-color: #cccccc;
 
 /* Fonts */
 
 $Roboto_Condensed: Roboto Condensed;
+$OpenSans_Regular: 'Open Sans', sans-serif;
+
+/* Reset */
+
+%Reset {
+  margin: 0;
+  padding: 0;
+}
