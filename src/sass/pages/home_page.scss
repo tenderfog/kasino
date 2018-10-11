@@ -78,4 +78,100 @@
   text-transform: uppercase;
   line-height: 1;
   color: #b6b5b5;
+  
+.planets_1 {
+	background: url('../img/planets_1.svg') no-repeat;
+	display: block;
+	width: 213px;
+	height: 189px;
+}
+
+.slot_hero {
+	background: url('../img/planets_2.svg') no-repeat;
+	display: block;
+	width: 200px;
+	height: 205px;
+	margin: 35px auto 0 auto;
+}
+
+.planets_3 {
+	background: url('../img/planets_3.svg') no-repeat;
+	display: block;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	right: 0;
+}
+
+.bird {
+	background: url('../img/slot_hero_1.png') no-repeat;
+	display: block;
+	width: 195px;
+	height: 164px;
+	position: absolute;
+	top: -65px;
+	left: 0;
+}
+
+.but {
+	width: 163px;
+	height: 48px;
+	border-radius: 5px;
+	display: inline-block;
+	color: $dark_grey;
+	font-family: $Roboto_Condensed;
+	font-size: 18px;
+	font-weight: 400;
+	text-align: center;
+	line-height: 48px;
+
+	&.yellow {
+		box-shadow: 0 2px 15px rgba(250, 239, 108, 0.42), 0 2px 4px rgba(0, 0, 0, 0.5);
+		background: $yellow;
+	}
+
+}
+
+.align_left {
+	text-align: left;
+}
+
+.align_right {
+	text-align: right;
+}
+
+.island_row {
+	margin-top: 125px;
+
+	& p {
+		color: $white;
+		font-family: $Roboto_Condensed;
+		font-size: 18px;
+		font-weight: 100;
+		line-height: 28px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	& .but_row {
+		& a {
+			display: block;
+			outline: none;
+
+			& .but.yellow {
+				vertical-align: middle;
+				margin-top: 100px;
+			}
+
+			& .but {
+				margin: 0 50px;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+
+		}
+
+	}
 }
