@@ -5993,6 +5993,13 @@ a.text-dark:focus {
 
 /* Fonts */
 
+/* Reset */
+
+.casinos-infoblock__text {
+	margin: 0;
+	padding: 0;
+}
+
 * {
 	transition: .5s;
 }
@@ -6153,6 +6160,86 @@ header .head_top {
 	position: absolute;
 	top: -65px;
 	left: 0;
+}
+
+.casino-item {
+	padding-top: 104px;
+}
+
+.casino-info {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.42), #151515);
+	height: 334px;
+	position: relative;
+}
+
+.casino-info__title {
+	font-family: Roboto Condensed;
+	font-weight: 400;
+	font-size: 22px;
+	color: #fff;
+	margin-bottom: 24px;
+	position: absolute;
+	top: 293px;
+	left: 28px;
+}
+
+.casino-info__rating {
+	position: absolute;
+	top: 295px;
+	right: 20px;
+}
+
+.rating-num {
+	display: inline-block;
+	width: 30.7px;
+	height: 25px;
+	border-radius: 8px;
+	background-color: #2e2e2e;
+	font-family: Roboto Condensed;
+	font-size: 17px;
+	text-align: center;
+	color: #fff;
+}
+
+.casinos-infoblock {
+	padding-top: 25px;
+}
+
+.casinos-infoblock__title {
+	font-family: Roboto Condensed;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 22px;
+	color: #fff;
+	margin-bottom: 24px;
+}
+
+.casinos-infoblock__text {
+	font-family: "Open Sans", sans-serif;
+	font-size: 15px;
+	line-height: 1.47;
+	color: #cccccc;
+	margin-bottom: 60px;
+}
+
+.casinos-infoblock__btn {
+	border: 0;
+	height: 36px;
+	border-radius: 5px;
+	box-shadow: 0 2px 15px 0 rgba(250, 239, 108, 0.42), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+	background-color: #e4d73b;
+	font-family: Roboto Condensed;
+	font-size: 15px;
+	text-align: center;
+	color: #030437;
+}
+
+.casinos-infoblock__options {
+	font-family: Roboto Condensed;
+	font-size: 13px;
+	text-transform: uppercase;
+	line-height: 1;
+	color: #b6b5b5;
 }
 
 .but {

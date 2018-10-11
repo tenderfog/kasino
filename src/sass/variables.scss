@@ -2,6 +2,7 @@
 
 $white: #fff;
 $blue: #06023a;
+$primary-text-color: #cccccc;
 $dark_blue: #040437;
 $yellow: #e4d73b;
 $dark_grey: #030437;
@@ -9,3 +10,11 @@ $dark_grey: #030437;
 /* Fonts */
 
 $Roboto_Condensed: Roboto Condensed;
+$OpenSans_Regular: 'Open Sans', sans-serif;
+
+/* Reset */
+
+%Reset {
+  margin: 0;
+  padding: 0;
+}
