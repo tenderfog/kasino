@@ -6510,6 +6510,10 @@ header .head_top {
 	font-weight: 700;
 }
 
+.carousel_row {
+	margin-bottom: 125px;
+}
+
 .cd-container {
 	position: relative;
 	width: 100%;
@@ -6567,7 +6571,7 @@ header .head_top {
 	right: 10px;
 }
 
-.cd-item-wrapper li .labels > div {
+.cd-item-wrapper li .labels .lbl {
 	width: 40px;
 	height: 40px;
 	border-radius: 100%;
@@ -6576,22 +6580,22 @@ header .head_top {
 	margin: 10px 0;
 }
 
-.cd-item-wrapper li .labels > div.yellow {
+.cd-item-wrapper li .labels .lbl.yellow {
 	box-shadow: 0 4px 8px #7e761d, 0 2px 7px rgba(0, 0, 0, 0.5);
 	background-color: #e4d73b;
 }
 
-.cd-item-wrapper li .labels > div.yellow img {
+.cd-item-wrapper li .labels .lbl.yellow img {
 	width: 35px;
 	height: 42px;
 }
 
-.cd-item-wrapper li .labels > div.green {
+.cd-item-wrapper li .labels .lbl.green {
 	box-shadow: 0 4px 8px #0b5431, 0 2px 7px rgba(0, 0, 0, 0.5);
 	background-color: #7ed321;
 }
 
-.cd-item-wrapper li .labels > div.green img {
+.cd-item-wrapper li .labels .lbl.green img {
 	width: 15px;
 	height: 25px;
 	display: inline-block;
@@ -6600,15 +6604,17 @@ header .head_top {
 .cd-item-wrapper li .img {
 	position: relative;
 	overflow: hidden;
+	border-radius: 8px 8px 0 0;
 }
 
 .cd-item-wrapper li .img:after {
 	content: '';
 	width: 100%;
-	height: 167px;
+	height: 100%;
 	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #151515 100%);
 	position: absolute;
 	top: 0;
+	bottom: 0;
 }
 
 .cd-item-wrapper li .img .but {
@@ -6636,7 +6642,7 @@ header .head_top {
 
 .cd-item-wrapper li .bottom_block {
 	box-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
-	border-radius: 8px;
+	border-radius: 0 0 8px 8px;
 	background-color: #151515;
 	position: relative;
 	padding-bottom: 10px;
@@ -6687,6 +6693,11 @@ header .head_top {
 	opacity: 1;
 }
 
+.cd-item-wrapper li .img.filter > img {
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+
 .cd-item-wrapper li .but_more {
 	width: 29px;
 	height: 29px;
@@ -6709,10 +6720,95 @@ header .head_top {
 	text-decoration: none;
 }
 
+.cd-item-wrapper li .mid_cont {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px 20px;
+}
+
+.cd-item-wrapper li .mid_cont .second_title {
+	color: #fff;
+	font-family: Roboto Condensed, sans-serif;
+	font-size: 17px;
+	border-bottom: 1px solid #fff;
+	margin-bottom: 10px;
+	font-weight: 100;
+	text-transform: uppercase;
+	width: 100%;
+	text-align: center;
+	opacity: 0;
+}
+
+.cd-item-wrapper li .mid_cont .desc {
+	color: #fff;
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 100;
+}
+
+.cd-item-wrapper li .mid_cont .desc .grey {
+	color: #565656;
+}
+
+.cd-item-wrapper li.sec_block .labels {
+	position: relative;
+	right: inherit;
+	top: inherit;
+	margin-left: 20px;
+}
+
+.cd-item-wrapper li.sec_block .labels .item {
+	display: inline-block;
+	vertical-align: middle;
+	width: 49%;
+}
+
+.cd-item-wrapper li.sec_block .labels .lbl {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 4px 0;
+}
+
+.cd-item-wrapper li.sec_block .labels .lbl img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.cd-item-wrapper li.sec_block .labels .txt {
+	display: inline-block;
+	vertical-align: middle;
+	width: 49%;
+	color: #b6b5b5;
+	font-family: Roboto Condensed, sans-serif;
+	font-size: 13px;
+	font-weight: 100;
+	line-height: 13px;
+	text-transform: uppercase;
+	margin-left: 5px;
+}
+
+.cd-item-wrapper li.sec_block .but_more {
+	color: #151515;
+	background-color: #e4d73b;
+	text-decoration: none;
+}
+
+.cd-item-wrapper li.sec_block .logo_slots {
+	margin: 15px 0 0 20px;
+}
+
 .cd-item-wrapper li.cd-item-front {
 	position: relative;
 	z-index: 3;
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.cd-item-wrapper li.cd-item-front .second_title {
+	opacity: 1;
 }
 
 .cd-item-wrapper li.cd-item-middle {
@@ -6797,24 +6893,40 @@ header .head_top {
 	color: #7385ad;
 }
 
-.cd-item-navigation a {
+.sl_but {
 	position: absolute;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-	width: 36px;
-	height: 66px;
-	background-color: rgba(216, 216, 216, 0.4);
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.cd-item-navigation {
+	padding: 0;
+	list-style: none;
+}
+
+.cd-item-navigation a {
+	width: 29px;
+	height: 29px;
+	background-color: #3e3e3e;
+	border-radius: 100%;
+	display: block;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	text-align: center;
+	color: #151515;
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 14px;
 	background-image: url("https://codyhouse.co/demo/3d-items-quick-view/img/cd-icon-arrow.svg");
 	background-repeat: no-repeat;
 	background-position: center center;
-	z-index: 4;
-	display: block;
-	border-radius: 0.25em;
 }
 
-.no-touch .cd-item-navigation a:hover {
-	background-color: rgba(216, 216, 216, 0.6);
+.cd-item-navigation a:hover {
+	color: #151515;
+	background-color: #e4d73b;
 }
 
 .cd-item-navigation a.visible {
@@ -6824,9 +6936,14 @@ header .head_top {
 }
 
 .cd-item-navigation li:nth-child(1) a {
-	left: 14px;
-	-webkit-transform: translateY(-50%) rotate(180deg);
-	transform: translateY(-50%) rotate(180deg);
+	right: 50px;
+	-webkit-transform: translateY(0) rotate(180deg);
+	transform: translateY(0) rotate(180deg);
+	display: none;
+}
+
+.cd-item-navigation .but_back.active {
+	display: block;
 }
 
 .cd-item-navigation li:nth-child(2) a {
@@ -6835,6 +6952,65 @@ header .head_top {
 
 .no-csstransitions .cd-item-navigation {
 	display: none;
+}
+
+footer {
+	margin-top: 60px;
+}
+
+.footer_container {
+	background: url("../img/footer_background.png") no-repeat top center;
+	height: 430px;
+	padding-top: 125px;
+}
+
+.footer_container ul {
+	padding: 0;
+	list-style: none;
+}
+
+.footer_container ul li {
+	list-style: none;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 15px;
+}
+
+.footer_container ul li a {
+	opacity: 0.93;
+	color: #fff;
+	font-family: "Roboto Condensed";
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.footer_container .logo {
+	height: 124px;
+}
+
+.footer_container .logo img {
+	max-width: 100%;
+	height: auto;
+}
+
+.footer_container .text {
+	color: #cdcdcd;
+	font-family: Roboto Condensed, sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	margin-top: 40px;
+	text-align: center;
+}
+
+.copyright {
+	background-color: #151515;
+	color: #cdcdcd;
+	font-family: Roboto Condensed, sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	text-align: center;
+	padding: 20px 0;
 }
 
 .casino-info {

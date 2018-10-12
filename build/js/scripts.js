@@ -102,13 +102,40 @@ jQuery(document).ready(function($){
             activeContainer = navigationAnchor.parents('nav').eq(0).siblings('.cd-item-wrapper');
         
         if( direction=="Next"){         
-            showNextSlide(activeContainer);         
+            showNextSlide(activeContainer);
+
+            if ( $(this).parents('.cd-container').find(".first_block").hasClass("cd-item-front") ) {
+
+                    $(this).parents('.cd-container').find('.but_back').removeClass('active');
+
+            }else{
+                $(this).parents('.cd-container').find('.but_back').addClass('active');
+            }
+
+            
         }else{          
             showPreviousSlide(activeContainer);
+            if ( $(this).parents('.cd-container').find(".first_block").hasClass("cd-item-front") ) {
+
+                    $(this).parents('.cd-container').find('.but_back').removeClass('active');
+
+            }else{
+                $(this).parents('.cd-container').find('.but_back').addClass('active');
+            }
         }            
     //  updateNavigation(navigationAnchor.parents('.cd-item-navigation').eq(0), activeContainer);
     setTimeout(function(){in_progress = 0;},500);   
     });
+
+
+    $(".checkbox_block").change(function () {
+        if ($(".checkbox_bl .checkbox", this).is(":checked")) {
+            $(this).parent().find('.checkbox_block').addClass("active");
+        }
+        else {
+           $(this).removeClass("active");
+       }
+    });  
 
 /*
         Radio + image
