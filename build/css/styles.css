@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=cyrillic,cyrillic-ext");
 
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
+
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -6236,6 +6238,8 @@ a.text-dark:focus {
 	padding: 0;
 }
 
+/*title*/
+
 * {
 	transition: .5s;
 }
@@ -7014,10 +7018,9 @@ footer {
 }
 
 .casino-info {
-	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.42), #151515);
-	height: 334px;
 	position: relative;
 	border-radius: 8px;
+	background-color: #fff;
 }
 
 .casino-info__title {
@@ -7043,6 +7046,15 @@ footer {
 	display: block;
 	width: 100%;
 	height: auto;
+	z-index: -10;
+}
+
+.info-img-box {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.42), #151515);
+	min-width: 100%;
+	min-height: 100px;
+	border-radius: 8px;
+	z-index: 1000000;
 }
 
 .casino-info__rating {
@@ -7058,6 +7070,12 @@ footer {
 
 .rating-stars__items {
 	list-style: none;
+	display: flex;
+}
+
+.rating-stars__icon {
+	width: 17px;
+	height: 15px;
 }
 
 .casino-info__rating {
@@ -7104,9 +7122,7 @@ footer {
 	align-items: center;
 }
 
-.casinos-infoblock__btn {
-	border: 0;
-	flex: 60%;
+.casino-btn__yellow {
 	height: 36px;
 	border-radius: 5px;
 	box-shadow: 0 2px 15px 0 rgba(250, 239, 108, 0.42), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
@@ -7115,12 +7131,16 @@ footer {
 	font-size: 15px;
 	text-align: center;
 	color: #030437;
+	line-height: 36px;
+}
+
+.casinos-infoblock__btn {
+	flex: 60%;
 	margin-right: 37px;
 }
 
 .stikers-info {
 	display: flex;
-	width: 230px;
 }
 
 .stikers-info__item {
@@ -7129,12 +7149,22 @@ footer {
 
 .stikers-info__icon {
 	width: 29px;
-	height: 28px;
-	background-color: #e4d73b;
+	height: 29px;
 	margin-right: 7px;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.fa-ourchoese {
+	background-image: url("./../../img/ourchoese_icon.svg");
+}
+
+.fa-mobile-friendly {
+	background-image: url("./../../img/stiker-mobile.svg");
 }
 
 .stikers-info__text {
+	width: 60px;
 	font-family: Roboto Condensed, sans-serif;
 	font-size: 13px;
 	text-transform: uppercase;
@@ -7157,9 +7187,18 @@ footer {
 
 .sucs-block__icon {
 	width: 58px;
-	height: 58px;
-	background-color: #3be43b;
+	height: 59px;
 	margin-bottom: 15px;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.fa-green_ok {
+	background-image: url("./../../img/green_ok_icon.svg");
+}
+
+.fa-red_ok {
+	background-image: url("./../../img/red_ok_icon.svg");
 }
 
 .sucs-block__text {
@@ -7218,6 +7257,10 @@ footer {
 	text-transform: uppercase;
 }
 
+.partner-card__logo {
+	flex: 0 0 60%;
+}
+
 .partner-card__title {
 	margin: 0;
 	color: #fff;
@@ -7228,20 +7271,33 @@ footer {
 	font-weight: 400;
 }
 
+.partner-card__img {
+	display: block;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
 .btn-show {
+	display: inline-block;
 	width: 99px;
 	height: 27px;
 	border-radius: 4px;
 	border: 1px solid #e4d73b;
-	color: #e4d73b;
 	font-family: Roboto Condensed, sans-serif;
 	font-size: 13px;
 	font-weight: 700;
-	background: rgba(0, 0, 0, 0);
+	text-align: center;
+	line-height: 26px;
+	color: #e4d73b;
 }
 
 .article-casino {
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 }
 
 .article-casino:last-child {
@@ -7264,7 +7320,9 @@ footer {
 	display: inline-block;
 	width: 48px;
 	height: 48px;
-	background-color: white;
+	background-image: url("./../../img/question-mark.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
 	margin-right: 23px;
 }
 
@@ -7274,7 +7332,129 @@ footer {
 	font-family: "Open Sans", sans-serif;
 	font-size: 15px;
 	line-height: 22px;
-	margin-top: 19px;
+	margin-top: 15px;
+}
+
+.info-sidebar,
+.top-casinos-block {
+	box-shadow: 0 2px 14px rgba(0, 0, 0, 0.44);
+	border-radius: 8px;
+	background-color: rgba(21, 21, 21, 0.73);
+	position: relative;
+}
+
+.info-sidebar {
+	margin-bottom: 57px;
+}
+
+.info-sidebar__header,
+.top-casinos-block__header {
+	height: 51px;
+	border-radius: 8px 8px 0 0;
+	background-color: #1f3184;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 25px;
+}
+
+.info-sidebar__title,
+.top-casinos-block__title {
+	margin: 0;
+	color: #5e6fbe;
+	font-family: Roboto Condensed, sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.info-sideba__main {
+	display: flex;
+	flex-direction: column;
+	padding: 30px 10px;
+}
+
+.info-sidebar__row {
+	display: flex;
+	margin-bottom: 16px;
+}
+
+.info-sidebar__row--title {
+	flex: 0 0 40%;
+	color: #636363;
+	font-family: Roboto Condensed, sans-serif;
+	font-size: 16px;
+}
+
+.info-sidebar__row--text {
+	flex: 0 0 60%;
+	color: #fff;
+	font-family: Roboto Condensed, sans-serif;
+	font-size: 16px;
+}
+
+.info-sidebar__btn {
+	width: 90%;
+	align-self: center;
+	margin-bottom: 27px;
+}
+
+.info-sidebar__stikers {
+	align-self: center;
+}
+
+.top-casinos-block__main {
+	padding: 25px 13px 45px 13px;
+}
+
+.top-casinos-block__logo {
+	align-self: flex-end;
+}
+
+.top-casinos-block__row {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 30px;
+}
+
+.top-casinos-block__row:last-child {
+	margin-bottom: 0;
+}
+
+.top-casinos-block__img {
+	flex: 0 0 29%;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.74);
+}
+
+.top-casinos-img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.top-casinos-box__btn {
+	flex: 0 0 64%;
+}
+
+.top-casinos__btn {
+	display: flex;
+	justify-content: space-between;
+	line-height: 36px;
+}
+
+.top-casinos-box__btn--play,
+.top-casinos-box__btn--more {
+	flex: 0 0 47%;
+	height: 36px;
+}
+
+.top-casinos-box__text {
+	display: block;
+	color: #fff;
+	font-family: Roboto Condensed, sans-serif;
+	font-size: 15px;
+	margin-bottom: 8px;
 }
 
 .btn-show--mt {
