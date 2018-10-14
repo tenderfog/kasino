@@ -121,7 +121,7 @@
 }
 
 .casino-btn__yellow {
-  // height: 36px;
+  display: block;
   border-radius: 5px;
   box-shadow: 0 2px 15px 0 rgba(250, 239, 108, 0.42),
     0 2px 4px 0 rgba(0, 0, 0, 0.5);
@@ -460,28 +460,4 @@
   font-family: $Roboto_Condensed;
   font-size: 15px;
   margin-bottom: 8px;
-}
-
-.mb-45 {
-  margin-bottom: 46px;
-}
-
-.mb-50 {
-  margin-bottom: 50px;
-}
-
-.mb-60 {
-  margin-bottom: 60px;
-}
-
-.mb-70 {
-  margin-bottom: 70px;
-}
-
-.mt-70 {
-  margin-top: 70px;
-}
-
-.mt-104 {
-  margin-top: 104px;
 }
