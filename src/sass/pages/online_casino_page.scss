@@ -49,20 +49,19 @@
 }
 
 .rating-stars {
-  width: 185px; //adaptive???????????????
-  border-radius: 8px;
-  background-color: #2e2e2e;
+  display: flex;
+  justify-content: space-between;
 }
 
 .rating-stars__items {
   @extend %Reset;
-  width: 100%;
-  height: 100%;
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 5px;
+  background-color: #2e2e2e;
+  border-radius: 8px;
 }
 
 .rating-stars__icon {
@@ -83,7 +82,6 @@
 
 .rating-total {
   display: inline-block;
-  width: 30.7px; //adaptive?????????????
   border-radius: 8px;
   background-color: #2e2e2e;
   font-family: $Roboto_Condensed;
@@ -91,6 +89,7 @@
   text-align: center;
   color: $white;
   margin-left: 13px;
+  padding: 0px 7px;
 }
 
 .casinos-infoblock {
@@ -465,6 +464,10 @@
 
 .mb-45 {
   margin-bottom: 46px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
 }
 
 .mb-60 {
