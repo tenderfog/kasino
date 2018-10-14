@@ -7070,19 +7070,18 @@ footer {
 }
 
 .rating-stars {
-	width: 185px;
-	border-radius: 8px;
-	background-color: #2e2e2e;
+	display: flex;
+	justify-content: space-between;
 }
 
 .rating-stars__items {
-	width: 100%;
-	height: 100%;
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0px 5px;
+	background-color: #2e2e2e;
+	border-radius: 8px;
 }
 
 .rating-stars__icon {
@@ -7103,7 +7102,6 @@ footer {
 
 .rating-total {
 	display: inline-block;
-	width: 30.7px;
 	border-radius: 8px;
 	background-color: #2e2e2e;
 	font-family: Roboto Condensed, sans-serif;
@@ -7111,6 +7109,7 @@ footer {
 	text-align: center;
 	color: #fff;
 	margin-left: 13px;
+	padding: 0px 7px;
 }
 
 .casinos-infoblock {
@@ -7486,6 +7485,10 @@ footer {
 	margin-bottom: 46px;
 }
 
+.mb-50 {
+	margin-bottom: 50px;
+}
+
 .mb-60 {
 	margin-bottom: 60px;
 }
@@ -7500,6 +7503,186 @@ footer {
 
 .mt-104 {
 	margin-top: 104px;
+}
+
+.free-slots-info {
+	display: flex;
+	background-color: rgba(21, 21, 21, 0.76);
+	border-radius: 8px;
+}
+
+.casino-info-slot {
+	flex: 0 0 65%;
+	border-radius: 8px;
+	position: relative;
+}
+
+.casino-info-slot__img-box::after {
+	display: block;
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border-radius: 8px;
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.42) 0%, #151515 100%);
+}
+
+.casino-info-slot__img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	padding-right: 1px;
+}
+
+.casino-info-slot-options {
+	position: absolute;
+	top: 3%;
+	right: 3%;
+}
+
+.casino-info-slot-options__btn--info,
+.casino-info-slot-options__btn--full-screen {
+	display: inline-block;
+	width: 49px;
+	height: 48px;
+	border-radius: 8px;
+	background-color: rgba(46, 46, 46, 0.63);
+}
+
+.casino-info-slot-rating {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	bottom: 3%;
+	left: 3%;
+	right: 3%;
+}
+
+.casino-info-slot-play {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	color: #e4d73b;
+	font-family: Roboto Condensed, sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.casino-info-slot-play__btn {
+	display: inline-block;
+	width: 95px;
+	height: 95px;
+	background-image: url("../img/play-icon-slot.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.casino-info-slot-rating__title {
+	margin: 0;
+	color: #fff;
+	font-family: Roboto Condensed, sans-serif;
+	font-size: 22px;
+	font-weight: 400;
+	z-index: 10;
+}
+
+.casino-info-slot-sidebar {
+	flex: 0 0 35%;
+	padding: 30px 30px 20px 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.casino-info-slot-sidebar__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 18px;
+}
+
+.casino-info-slot-sidebar__title {
+	margin: 0;
+	color: #ffffff;
+	font-family: Roboto Condensed, sans-serif;
+	font-size: 22px;
+	font-weight: 400;
+}
+
+.casino-info-slot-sidebar__table {
+	display: flex;
+	padding-left: 18px;
+}
+
+.casino-info-slot-sidebar__text-box {
+	display: flex;
+	flex-direction: column;
+}
+
+.casino-info-slot-sidebar__table-box {
+	min-width: 79px;
+	height: 25px;
+	border-radius: 8px;
+	background-color: #2e2e2e;
+	margin-bottom: 5px;
+}
+
+.casino-info-slot-sidebar__table-text {
+	display: block;
+	color: #fff;
+	font-family: Roboto Condensed, sans-serif;
+	font-size: 17px;
+	text-align: center;
+	padding: 0px 7px;
+}
+
+.casino-info-slot-sidebar__table-title {
+	flex: 0 0 63%;
+	color: #636363;
+	font-family: Roboto Condensed, sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.casino-info-slot-sidebar__btn {
+	display: block;
+	width: 100%;
+	height: 36px;
+	margin-top: 15px;
+}
+
+.top-casinos-slot__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 30px;
+	height: 51px;
+	border-radius: 8px 8px 0 0;
+	background-color: #1f3184;
+}
+
+.top-casinos-slot__title {
+	margin: 0;
+	color: #5e6fbe;
+	font-family: Roboto Condensed, sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.top-casinos-slot__main {
+	box-shadow: 0 2px 14px rgba(0, 0, 0, 0.44);
+	border-radius: 8px;
+	background-color: rgba(21, 21, 21, 0.73);
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
