@@ -1,0 +1,234 @@
+.free_slots {
+	margin: 80px 0;
+}
+.slots_items{
+	& .cd-container {
+		list-style: none;
+		margin-bottom: 60px;
+	}
+}
+
+
+.title_nav {
+	width: 247px;
+	height: 51px;
+	border-radius: 8px 8px 0 0;
+	background-color: #1f3184;
+	color: #5e6fbe;
+	font-family: $Roboto_Condensed;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 16px 20px;
+}
+
+.sidebar_nav {
+	margin-bottom: 55px;
+
+	& .navbar-header {
+		display: none;
+	}
+
+	& .navbar {
+		padding: 0;
+	}
+
+	& .navbar-nav {
+		box-shadow: 0 2px 14px rgba(0, 0, 0, 0.44);
+		border-radius: 8px;
+		background-color: rgba(21, 21, 21, 0.73);
+		padding: 30px 0 30px 50px !important;
+		position: relative;
+
+		&:before {
+			content: '';
+			display: block;
+			width: 1px;
+			height: 100%;
+			box-shadow: 0 0 7px #4d8ee3;
+			background: $blue_light;
+			position: absolute;
+			top: 0;
+			left: 25px;
+		}
+
+		& > li {
+			& > a {
+				position: relative;
+				color: #636363;
+				font-family: $Roboto_Condensed;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 35px;
+				display: block;
+
+				&:before {
+					content: '';
+					display: block;
+					width: 8px;
+					height: 8px;
+					border: 1px solid $blue_light;
+					background-color: $blue_light;
+					position: absolute;
+					top: 50%;
+					left: -28px;
+					margin-top: -4px;
+					border-radius: 100%;
+				}
+
+				&:after {
+					content: '';
+					display: block;
+					width: 9px;
+					height: 16px;
+					background: url('../img/nav_next.svg') no-repeat;
+					background-size: 100%;
+					position: absolute;
+					top: 50%;
+					margin-top: -8px;
+					right: 24px;
+				}
+
+				&[aria-expanded="true"] {
+					color: $white;
+
+					&:after {
+						-moz-transform: rotate(90deg);
+						-ms-transform: rotate(90deg);
+						-webkit-transform: rotate(90deg);
+						-o-transform: rotate(90deg);
+						transform: rotate(90deg);
+					}
+
+				}
+
+			}
+
+			& > div {
+				background-color: rgba(52, 52, 52, 0.33);
+				margin-left: -25px;
+				padding: 20px 10px 20px 25px;
+
+				& .nav {
+					display: flex;
+					flex-direction: column;
+					flex-wrap: nowrap;
+					justify-content: flex-start;
+					align-items: stretch;
+					align-content: stretch;
+
+					& li {
+						display: block;
+
+						& a {
+							color: #b8b8b8;
+							font-family: $Roboto_Condensed;
+							font-size: 16px;
+							font-weight: 400;
+							line-height: 35px;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+/* Customize checkbox */
+.sidebar_nav .navbar-nav.checkbox_nav {
+	padding: 30px 0 30px 20px !important;
+
+	&:before {
+		content: none;
+	}
+
+	& .container {
+		display: block;
+		position: relative;
+		padding-left: 35px;
+		margin-bottom: 12px;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		color: #636363;
+		font-family: $Roboto_Condensed;
+		font-size: 16px;
+		font-weight: 400;
+
+		& input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+		}
+
+		& .checkmark {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 18px;
+			height: 18px;
+			margin-top: -9px;
+			border: 1px solid #636363;
+
+			&:after {
+				content: "";
+				position: absolute;
+				display: none;
+				background: url('../img/checkbox.svg') no-repeat;
+				background-size: contain;
+				width: 12px;
+				height: 7px;
+				top: 50%;
+				margin-top: -3px;
+				left: 2px;
+			}
+
+		}
+
+		&:hover input ~ .checkmark {
+			border: 1px solid $blue_light;
+		}
+
+		& input:checked ~ .checkmark {
+			border: 1px solid $blue_light;
+		}
+
+		& input:checked ~ .checkmark:after {
+			display: block;
+		}
+
+	}
+
+	& .article-btn-show {
+		&:after, &:before {
+			content: none;
+		}
+
+		border-radius: 4px;
+		border: 1px solid #3e3e3e;
+		color: #3e3e3e;
+		font-family: $Roboto_Condensed;
+		font-size: 13px;
+		font-weight: 700;
+		line-height: 26px;
+		margin-left: 35px;
+
+		&:hover {
+			border: 1px solid $yellow;
+			color: $yellow;
+			text-decoration: none;
+		}
+
+	}
+
+}
