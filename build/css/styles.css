@@ -6259,7 +6259,8 @@ body {
 }
 
 header {
-	height: 145px;
+	height: 118px;
+	background-color: rgba(5, 5, 37, 0.55);
 }
 
 header .head_top {
@@ -6267,11 +6268,34 @@ header .head_top {
 }
 
 #logo {
-	width: 189px;
-	height: 124px;
+	width: 107px;
+	height: 74px;
+	margin-top: 20px;
 }
 
 #logo img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	max-height: 100%;
+}
+
+header.home_hd {
+	height: 145px;
+	background-color: transparent;
+}
+
+header.home_hd .head_top {
+	height: 100%;
+}
+
+header.home_hd #logo {
+	width: 189px;
+	height: 124px;
+	margin-top: 0px;
+}
+
+header.home_hd #logo img {
 	max-width: 100%;
 	height: auto;
 }
@@ -6329,7 +6353,7 @@ header .head_top {
 .navbar-nav form[role="search"] {
 	position: absolute;
 	top: 37px;
-	right: -10px;
+	right: 0px;
 	width: 100%;
 	padding: 0px;
 	margin: 0px;
@@ -6366,6 +6390,12 @@ header .head_top {
 
 .navbar-nav form[role="search"] button[type="reset"] {
 	display: none;
+}
+
+form[role="search"] .submit_but img,
+form[role="search"] .reset img {
+	width: 20px;
+	height: 20px;
 }
 
 .planets_1 {
@@ -6418,6 +6448,12 @@ header .head_top {
 .but.yellow {
 	box-shadow: 0 2px 15px rgba(250, 239, 108, 0.42), 0 2px 4px rgba(0, 0, 0, 0.5);
 	background: #e4d73b;
+}
+
+.but:hover {
+	text-decoration: none;
+	opacity: 0.8;
+	color: #030437;
 }
 
 .align_left {
@@ -6567,6 +6603,7 @@ header .head_top {
 	backface-visibility: hidden;
 	transition: all 0.4s;
 	list-style: none;
+	width: 100%;
 }
 
 .cd-item-wrapper li .labels {
@@ -6956,6 +6993,154 @@ header .head_top {
 
 .no-csstransitions .cd-item-navigation {
 	display: none;
+}
+
+.dots {
+	vertical-align: middle;
+	margin-top: -12px;
+	display: inline-block;
+	line-height: initial;
+	margin-right: 10px;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.but_read_more {
+	margin: 25px 0;
+	text-align: center;
+}
+
+.owl-carousel .owl-nav.disabled,
+.owl-carousel .owl-dots.disabled {
+	display: block;
+}
+
+.owl-carousel .owl-nav .owl-prev {
+	position: absolute;
+	top: 50%;
+	margin-top: -19px;
+	margin-left: -5%;
+}
+
+.owl-carousel .owl-nav .owl-next {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin-top: -19px;
+	margin-right: -5%;
+}
+
+.owl-carousel .owl-dots {
+	position: relative;
+	text-align: center;
+	margin-top: 40px;
+}
+
+.owl-carousel .owl-dots .owl-dot {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-color: #2d2f8a;
+	border-radius: 100%;
+	margin: 0 5px;
+}
+
+.owl-carousel .owl-dots .owl-dot.active {
+	background-color: #e4d73b;
+}
+
+.cd_ratings_blocks {
+	margin-bottom: 50px;
+}
+
+.cd_ratings_blocks .cd-item-wrapper li .img:after {
+	content: none;
+}
+
+.cd_ratings_blocks .cd-item-wrapper li .img .but {
+	margin-left: -60px;
+}
+
+.cd_ratings_blocks .cd-item-wrapper li .img.filter {
+	height: 180px;
+}
+
+.cd_ratings_blocks .cd-item-wrapper li .img.filter > img {
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+	height: 100%;
+	width: auto;
+	margin-left: -5%;
+}
+
+.cd_ratings_blocks .cd-item-wrapper li .rating-stars__items {
+	padding: 5px;
+}
+
+.cd_ratings_blocks .cd-item-wrapper li .casino-info__rating {
+	left: 50%;
+	margin-left: -95px;
+}
+
+.cd_ratings_blocks .cd-item-wrapper li .casino-info__rating .rating-stars {
+	width: 193px;
+}
+
+.cd_ratings_blocks .cd-item-wrapper li .bottom_block {
+	padding-top: 15px;
+	padding-bottom: 40px;
+}
+
+.cd_ratings_blocks .cd-item-wrapper li .bottom_block .under_title {
+	color: #b9b9b9;
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	line-height: 21px;
+}
+
+.cd_ratings_blocks .cd-item-wrapper li .bottom_block .under_title span {
+	color: #565656;
+}
+
+.cd_ratings_blocks .cd-item-wrapper li .bottom_block .labels {
+	position: relative;
+	right: inherit;
+	top: inherit;
+	margin-left: 20px;
+}
+
+.cd_ratings_blocks .cd-item-wrapper li .bottom_block .labels .item {
+	display: inline-block;
+	vertical-align: middle;
+	width: 49%;
+}
+
+.cd_ratings_blocks .cd-item-wrapper li .bottom_block .labels .item .lbl {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 4px 0;
+}
+
+.cd_ratings_blocks .cd-item-wrapper li .bottom_block .labels .item .txt {
+	display: inline-block;
+	vertical-align: middle;
+	width: 49%;
+	color: #b6b5b5;
+	font-family: Roboto Condensed, sans-serif;
+	font-size: 13px;
+	font-weight: 100;
+	line-height: 13px;
+	text-transform: uppercase;
+	margin-left: 5px;
+}
+
+.rating-stars__items li {
+	position: relative;
+	-webkit-transform: inherit;
+	transform: inherit;
+	left: inherit;
+	top: inherit;
+	width: auto;
 }
 
 footer {
@@ -9213,14 +9398,29 @@ footer {
 	width: 100%;
 }
 
+.navbar-nav form[role="search"].active .input-group-btn {
+	position: absolute;
+	right: 3px;
+	top: 1px;
+	z-index: 10;
+}
+
+.navbar-nav form[role="search"].active .submit_but,
+.navbar-nav form[role="search"].active .reset {
+	background: #e4d73b;
+}
+
 .navbar-nav form[role="search"].active button,
 .navbar-nav form[role="search"].active input {
-	display: table-cell;
+	display: inline-block;
 	opacity: 1;
+	width: 30px;
+	height: 26px;
+	font-size: 14px;
 }
 
 .navbar-nav form[role="search"].active input {
-	width: 90%;
+	width: 100%;
 }
 
 }

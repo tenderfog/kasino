@@ -49,6 +49,12 @@
 		background: $yellow;
 	}
 
+	&:hover {
+		text-decoration: none;
+		opacity: 0.8;
+		color: $dark_grey;
+	}
+
 }
 
 .align_left {
@@ -153,7 +159,7 @@
 
 }
 
-.carousel_row{
+.carousel_row {
 	margin-bottom: 125px;
 }
 
@@ -252,6 +258,7 @@
 	-moz-transition: all 0.4s;
 	transition: all 0.4s;
 	list-style: none;
+	width: 100%;
 
 	& .labels {
 		position: absolute;
@@ -630,41 +637,40 @@
 	color: #7385ad;
 }
 
-.sl_but{
-	    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+.sl_but {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
 }
 
 .cd-item-navigation {
-	    padding: 0;
-    list-style: none;
+	padding: 0;
+	list-style: none;
 }
 
 .cd-item-navigation a {
-
 	width: 29px;
-    height: 29px;
-    background-color: #3e3e3e;
-    border-radius: 100%;
-    display: block;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    text-align: center;
-    color: #151515;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 14px;
-    background-image: url("https://codyhouse.co/demo/3d-items-quick-view/img/cd-icon-arrow.svg");
+	height: 29px;
+	background-color: #3e3e3e;
+	border-radius: 100%;
+	display: block;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	text-align: center;
+	color: #151515;
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 14px;
+	background-image: url("https://codyhouse.co/demo/3d-items-quick-view/img/cd-icon-arrow.svg");
 	background-repeat: no-repeat;
 	background-position: center center;
 }
 
 .cd-item-navigation a:hover {
 	color: #151515;
-			background-color: #e4d73b;
+	background-color: #e4d73b;
 }
 
 .cd-item-navigation a.visible {
@@ -684,8 +690,7 @@
 	display: none;
 }
 
-
-.cd-item-navigation .but_back.active{
+.cd-item-navigation .but_back.active {
 	display: block;
 }
 
@@ -695,6 +700,16 @@
 
 .no-csstransitions .cd-item-navigation {
 	display: none;
+}
+
+.dots {
+	vertical-align: middle;
+	margin-top: -12px;
+	display: inline-block;
+	line-height: initial;
+	margin-right: 10px;
+	font-weight: 700;
+	font-size: 20px;
 }
 
 @-webkit-keyframes cd-fade-in {
@@ -730,22 +745,186 @@
 
 }
 
-footer{
+.but_read_more {
+	margin: 25px 0;
+	text-align: center;
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+	display: block;
+}
+
+.owl-carousel .owl-nav .owl-prev {
+	position: absolute;
+	top: 50%;
+	margin-top: -19px;
+	margin-left: -5%;
+}
+
+.owl-carousel .owl-nav .owl-next {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin-top: -19px;
+	margin-right: -5%;
+}
+
+.owl-carousel {
+	& .owl-dots {
+		position: relative;
+		text-align: center;
+		margin-top: 40px;
+
+		& .owl-dot {
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			background-color: #2d2f8a;
+			border-radius: 100%;
+			margin: 0 5px;
+
+			&.active {
+				background-color: #e4d73b;
+			}
+
+		}
+
+	}
+
+}
+
+.cd_ratings_blocks {
+	margin-bottom: 50px;
+
+	& .cd-item-wrapper {
+		& li {
+			& .img {
+				&:after {
+					content: none;
+				}
+
+				& .but {
+					margin-left: -60px;
+				}
+
+				&.filter {
+					height: 180px;
+
+					& > img {
+						-webkit-filter: blur(10px);
+						filter: blur(10px);
+						height: 100%;
+						width: auto;
+						margin-left: -5%;
+					}
+
+				}
+
+			}
+
+			& .rating-stars__items {
+				padding: 5px;
+			}
+
+			& .casino-info__rating {
+				left: 50%;
+				margin-left: -95px;
+
+				& .rating-stars {
+					width: 193px;
+				}
+
+			}
+
+			& .bottom_block {
+				padding-top: 15px;
+				padding-bottom: 40px;
+
+				& .under_title {
+					color: #b9b9b9;
+					font-family: $OpenSans_Regular;
+					font-size: 14px;
+					line-height: 21px;
+
+					& span {
+						color: $grey;
+					}
+
+				}
+
+				& .labels {
+					position: relative;
+					right: inherit;
+					top: inherit;
+					margin-left: 20px;
+
+					& .item {
+						display: inline-block;
+						vertical-align: middle;
+						width: 49%;
+
+						& .lbl {
+							display: inline-block;
+							vertical-align: middle;
+							margin: 4px 0;
+						}
+
+						& .txt {
+							display: inline-block;
+							vertical-align: middle;
+							width: 49%;
+							color: #b6b5b5;
+							font-family: $Roboto_Condensed;
+							font-size: 13px;
+							font-weight: 100;
+							line-height: 13px;
+							text-transform: uppercase;
+							margin-left: 5px;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+.rating-stars__items {
+	& li {
+		position: relative;
+		transform: inherit;
+		left: inherit;
+		top: inherit;
+		width: auto;
+	}
+
+}
+
+footer {
 	margin-top: 60px;
 }
-.footer_container{
+
+.footer_container {
 	background: url('../img/footer_background.png') no-repeat top center;
 	height: 430px;
-	    padding-top: 125px;
-	& ul{
-		padding:0;
+	padding-top: 125px;
+
+	& ul {
+		padding: 0;
 		list-style: none;
-		& li{
+
+		& li {
 			list-style: none;
 			display: inline-block;
 			vertical-align: middle;
 			margin-right: 15px;
-			& a{
+
+			& a {
 				opacity: 0.93;
 				color: $white;
 				font-family: "Roboto Condensed";
@@ -753,16 +932,22 @@ footer{
 				font-weight: 700;
 				text-transform: uppercase;
 			}
+
 		}
+
 	}
-	& .logo{
+
+	& .logo {
 		height: 124px;
-		& img{
+
+		& img {
 			max-width: 100%;
-			height:auto;
+			height: auto;
 		}
+
 	}
-	& .text{
+
+	& .text {
 		color: #cdcdcd;
 		font-family: $Roboto_Condensed;
 		font-size: 15px;
@@ -770,9 +955,10 @@ footer{
 		margin-top: 40px;
 		text-align: center;
 	}
+
 }
 
-.copyright{
+.copyright {
 	background-color: #151515;
 	color: #cdcdcd;
 	font-family: $Roboto_Condensed;

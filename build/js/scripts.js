@@ -38,6 +38,8 @@ $(document).ready(function() {
         $('.slots_game').owlCarousel({
             loop:true,
             margin:30,
+            nav:true,
+            navText:['<img src="img/prev.svg">','<img src="img/next.svg">'],
             responsive:{
                 0:{
                     items:1,
@@ -45,12 +47,10 @@ $(document).ready(function() {
                 },
                 600:{
                     items:4,
-                    nav:false
+                    nav:true
                 },
                 1000:{
                     items:4,
-                    nav:true,
-                    loop:true
                 }
             }
         })

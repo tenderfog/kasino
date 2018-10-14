@@ -1,5 +1,6 @@
 header {
-	height: 145px;
+	height: 118px;
+	background-color: rgba(5, 5, 37, 0.55);
 	& .head_top {
 		height: 100%;
 	}
@@ -7,12 +8,33 @@ header {
 }
 
 #logo {
-	width: 189px;
-	height: 124px;
-
+	width: 107px;
+	height: 74px;
+	margin-top: 20px;
 	& img {
 		max-width: 100%;
+		width: auto;
 		height: auto;
+		max-height: 100%
+	}
+}
+
+header.home_hd {
+	height: 145px;
+	background-color: transparent;
+	& .head_top {
+			height: 100%;
+	}
+
+	& #logo {
+		width: 189px;
+		height: 124px;
+   		margin-top: 0px;
+		& img {
+			max-width: 100%;
+			height: auto;
+		}
+
 	}
 
 }
@@ -23,6 +45,7 @@ header {
 
 .navbar-nav {
 	position: relative;
+
 	& .nav-link {
 		color: $white;
 		font-family: 'Roboto Condensed', sans-serif;
@@ -69,7 +92,7 @@ header {
 	& form[role="search"] {
 		position: absolute;
 		top: 37px;
-    	right: -10px;
+		right: 0px;
 		width: 100%;
 		padding: 0px;
 		margin: 0px;
@@ -108,6 +131,16 @@ header {
 
 }
 
+form[role="search"] {
+	& .submit_but, & .reset {
+		& img {
+			width: 20px;
+			height: 20px;
+		}
+
+	}
+
+}
 
 @media (min-width:768px) {
 	.navbar-nav {
@@ -135,15 +168,30 @@ header {
 
 		& form[role="search"].active {
 			width: 100%;
+
+			& .input-group-btn {
+				position: absolute;
+				right: 3px;
+				top: 1px;
+				z-index: 10;
+			}
+
+			& .submit_but, & .reset {
+				background: #e4d73b;
+			}
+
 		}
 
 		& form[role="search"].active button, & form[role="search"].active input {
-			display: table-cell;
+			display: inline-block;
 			opacity: 1;
+			width: 30px;
+			height: 26px;
+			font-size: 14px;
 		}
 
 		& form[role="search"].active input {
-			width: 90%;
+			width: 100%;
 		}
 
 	}
