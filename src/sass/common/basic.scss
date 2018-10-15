@@ -7,9 +7,10 @@ html{
 body {
 	background: $dark_blue url(../img/background.svg) no-repeat top center;
     height: 100%;
+    background-size: 100%;
 }
 
 .wrapper{
 	    background: url(../img/background_png.png) no-repeat;
-    background-size: cover;
+    background-size: 100%;
 }
