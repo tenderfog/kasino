@@ -7368,6 +7368,12 @@ footer {
 	line-height: 36px;
 }
 
+.casino-btn__yellow:hover {
+	text-decoration: none;
+	opacity: 0.8;
+	color: #030437;
+}
+
 .casinos-infoblock__btn {
 	flex: 60%;
 	margin-right: 37px;

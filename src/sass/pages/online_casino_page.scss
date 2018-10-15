@@ -131,6 +131,11 @@
   text-align: center;
   color: #030437;
   line-height: 36px;
+  &:hover {
+    text-decoration: none;
+    opacity: 0.8;
+    color: #030437;
+  }
 }
 
 .casinos-infoblock__btn {
