@@ -6281,11 +6281,12 @@ html {
 body {
 	background: #040437 url(../img/background.svg) no-repeat top center;
 	height: 100%;
+	background-size: 100%;
 }
 
 .wrapper {
 	background: url(../img/background_png.png) no-repeat;
-	background-size: cover;
+	background-size: 100%;
 }
 
 header {
@@ -7180,6 +7181,7 @@ footer {
 
 .footer_container {
 	background: url("../img/footer_background.png") no-repeat top center;
+	background-size: cover;
 	height: 430px;
 	padding-top: 125px;
 }
