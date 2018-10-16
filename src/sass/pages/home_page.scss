@@ -539,7 +539,10 @@
 	z-index: 2;
     top: 9px;
     padding: 0 3px;
-    opacity: 0.8;
+    & .bottom_block{
+    	background-color: #373737;
+		opacity: 0.75;
+    }
 }
 
 .active .cd-item-wrapper li.cd-item-middle {
@@ -558,7 +561,10 @@
 	    z-index: 1;
     top: 17px;
     padding: 0 9px;
-    opacity: 0.6;
+    & .bottom_block{
+    	background-color: #373737;
+		opacity: 0.36;
+    }
 }
 
 .active .cd-item-wrapper li.cd-item-back {
@@ -846,6 +852,7 @@
 			& .bottom_block {
 				padding-top: 15px;
 				padding-bottom: 40px;
+				min-height: 255px;
 
 				& .under_title {
 					color: #b9b9b9;
