@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>warning-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-3.1%" y="-4.1%" width="106.1%" height="108.2%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="aff_des_slot_item" transform="translate(-1001.000000, -267.000000)" fill="#E4D73B" fill-rule="nonzero">
+            <g id="casino_info" filter="url(#filter-1)" transform="translate(404.000000, 252.000000)">
+                <g id="warning-btn" transform="translate(597.000000, 16.000000)">
+                    <g id="warning-icon" transform="translate(14.000000, 13.000000)">
+                        <path d="M21.8165,18.934326 L12.2295909,0.774472648 C11.9905455,0.320468271 11.5220909,0.0355207877 11.0122273,0.0355207877 L11.0108636,0.0355207877 C10.501,0.0355207877 10.0339545,0.319089716 9.7935,0.773094092 L0.163772727,18.9329015 C-0.0655909091,19.3687549 -0.0531818182,19.8911816 0.195545455,20.3102626 C0.445636364,20.7307221 0.896136364,20.9891554 1.38113636,20.9891554 L20.5963636,20.9891554 C21.0827727,20.9891554 21.5318182,20.7321007 21.7819545,20.3102626 C22.0320455,19.8898031 22.0445,19.3673764 21.8165,18.934326 Z M11.0108636,18.1953282 C10.2480909,18.1953282 9.62909091,17.5695098 9.62909091,16.7984376 C9.62909091,16.0273654 10.2481364,15.401547 11.0108636,15.401547 C11.7722273,15.401547 12.3926364,16.0273654 12.3926364,16.7984376 C12.3926364,17.5695098 11.7736364,18.1953282 11.0108636,18.1953282 Z M12.3940455,12.6300525 C12.3940455,13.4025492 11.7736364,14.0269431 11.0122727,14.0269431 C10.2495,14.0269431 9.6305,13.4025033 9.6305,12.6300525 L9.6305,7.04239825 C9.6305,6.27128009 10.2495455,5.64550766 11.0122727,5.64550766 C11.7736364,5.64550766 12.3940455,6.27132604 12.3940455,7.04239825 L12.3940455,12.6300525 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
