@@ -241,6 +241,7 @@
 	perspective-origin: 50% -30%;
 	list-style: none;
 	padding: 0;
+	box-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
 }
 
 .cd-item-wrapper li {
@@ -259,6 +260,7 @@
 	transition: all 0.4s;
 	list-style: none;
 	width: 100%;
+
 
 	& .labels {
 		position: absolute;
@@ -342,7 +344,6 @@
 	}
 
 	& .bottom_block {
-		box-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
 		border-radius: 0 0 8px 8px;
 		background-color: #151515;
 		position: relative;
@@ -536,6 +537,9 @@
 
 .cd-item-wrapper li.cd-item-middle {
 	z-index: 2;
+    top: 9px;
+    padding: 0 3px;
+    opacity: 0.8;
 }
 
 .active .cd-item-wrapper li.cd-item-middle {
@@ -551,7 +555,10 @@
 }
 
 .cd-item-wrapper li.cd-item-back {
-	z-index: 1;
+	    z-index: 1;
+    top: 17px;
+    padding: 0 9px;
+    opacity: 0.6;
 }
 
 .active .cd-item-wrapper li.cd-item-back {
