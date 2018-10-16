@@ -60,6 +60,9 @@
 
 .casino-info__rating {
   display: flex;
+  position: absolute;
+  bottom: 5%;
+  right: 3%;
 }
 
 .rating-stars {
@@ -86,12 +89,6 @@
 
 .fa-star-active {
   fill: #e4d73b;
-}
-
-.casino-info__rating {
-  position: absolute;
-  bottom: 5%;
-  right: 3%;
 }
 
 .rating-total {
@@ -455,6 +452,7 @@
 .top-casinos-block__row {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   margin-bottom: 30px;
   &:last-child {
     margin-bottom: 0;
@@ -498,6 +496,47 @@
   margin-bottom: 8px;
 }
 
+@media (max-width: 575px) {
+  .casino-info-container {
+    padding: 0px 10px;
+    align-items: center;
+  }
+
+  .casino-info__logo-box {
+    width: 40%;
+    top: 40%;
+  }
+
+  .casino-info__rating {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .casino-info__title {
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .partner {
+    padding: 12px 10px 18px 10px;
+  }
+
+  .partner__item {
+    flex: 0 0 47%;
+  }
+
+  .info-sidebar__header,
+  .top-casinos-block__header {
+    padding: 0px 10px;
+  }
+
+  .sidebar-item {
+    flex: 0 0 100%;
+
+  }
+}
+
 @media (max-width: 767px) {
   .sucs-block {
     justify-content: space-around;
@@ -535,8 +574,6 @@
     flex: 0 0 70%;
     margin-top: 50px;
   }
-
-
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
