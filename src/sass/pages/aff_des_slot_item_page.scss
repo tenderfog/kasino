@@ -357,6 +357,51 @@
   justify-self: end;
 }
 
+@media (max-width: 575px) {
+  .casino-info-slot-rating {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .casino-info-slot-play {
+    top: 45%;
+  }
+
+  .casino-info-slot-play__btn {
+    width: 80px;
+    height: 80px;
+  }
+
+  .casino-info-slot-sidebar {
+    padding: 30px 10px 20px 10px;
+  }
+
+  .casino-info-slot-sidebar__header,
+  .casino-info-slot-sidebar__table {
+    padding: 0;
+  }
+
+  .casino-info-slot-sidebar__main {
+    padding: 15px 0px;
+  }
+
+  .casino-info-slot-sidebar__table-title {
+    flex: 0 0 55%;
+  }
+
+  .top-games-block {
+    flex: 0 0 100%;
+  }
+
+  .top-games-block__name {
+    flex: 0 0 40%;
+  }
+
+  .top-games-block__btn {
+    flex: 0 0 28%;
+  }
+}
+
 @media (max-width: 767px) {
   .more-games-slot {
     flex-direction: column;
