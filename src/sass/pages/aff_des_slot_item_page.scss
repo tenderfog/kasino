@@ -49,6 +49,14 @@
   background-color: rgba(46, 46, 46, 0.63);
 }
 
+.casino-info-slot-options__btn--info {
+  background-image: url("../img/warning-icon.svg");
+}
+
+.casino-info-slot-options__btn--full-screen {
+  background-image: url("../img/full-screen-icon.svg");
+}
+
 .casino-info-slot-rating {
   display: flex;
   justify-content: space-between;
@@ -226,10 +234,16 @@
   text-align: center;
   line-height: 25px;
   margin: auto;
+  &:hover {
+    border: 1px solid #e4d73b;
+    color: #e4d73b;
+    text-decoration: none;
+  }
 }
 
 .more-games-slot {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -239,6 +253,21 @@
 
 .more-games-slot__item > ul {
   list-style: none;
+}
+
+.faq-slot-block-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.faq-slot-block {
+  flex: 0 0 62%;
+}
+
+.article-casino {
+  margin-bottom: 50px;
 }
 
 .article-casino-slot__title {
@@ -256,6 +285,7 @@
 }
 
 .top-games-block {
+  flex: 0 0 35%;
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.44);
   border-radius: 8px;
   background-color: rgba(21, 21, 21, 0.73);
@@ -325,4 +355,80 @@
   flex: 0 0 21%;
   height: 36px;
   justify-self: end;
+}
+
+@media (max-width: 767px) {
+  .more-games-slot {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-casinos-slot__box {
+    flex: 0 0 46%;
+    &:nth-child(-n + 4) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .faq-slot-block {
+    flex: 0 0 100%;
+  }
+
+  .top-games-block {
+    flex: 0 0 80%;
+    margin: auto;
+    margin-top: 60px;
+  }
+
+  .article-slot-btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .top-casinos-slot__box {
+    flex: 0 0 30%;
+    &:nth-child(-n + 3) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .faq-slot-block {
+    flex: 0 0 50%;
+  }
+
+  .top-games-block {
+    flex: 0 0 48%;
+  }
+}
+
+@media (max-width: 991px) {
+  .free-slots-info {
+    flex-direction: column;
+  }
+
+  .casino-info-slot-sidebar__main {
+    padding: 0px 5%;
+  }
+
+  .casino-info-slot-sidebar__table-box,
+  .casino-info-slot-sidebar__text-box {
+    margin-left: auto;
+  }
+
+  .casino-info-slot-sidebar__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-casinos-slot__main {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1199px) {
+  .more-games-slot--media {
+    flex: 0 0 25%;
+  }
 }
